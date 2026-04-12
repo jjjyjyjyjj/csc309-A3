@@ -1,0 +1,174 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum AccountType{
+  regular
+  business
+  administrator
+}
+
+model Account {
+id Int @id @default(autoincrement())
+email	String	@unique
+username String? @unique
+password	String
+createdAt DateTime @default(now())
+activated Boolean @default(false)
+role AccountType
+jwtToken String? @unique
+jwtExpiresAt DateTime?
+resetToken String? @unique
+resetExpiresAt DateTime?
+resetTokenUsed Boolean @default(false)
+
+
+// reg user info
+first_name String?
+last_name	String?
+birthday	DateTime?
+resume  String? 
+last_active DateTime @default(now())
+available Boolean @default(false)
+suspended Boolean @default(false)
+
+assigned_jobs Job[] @relation("AssignedWorker")
+qualifications Qualification[]
+interests Interest[]
+user_negotiations Negotiation[] @relation("user_negotiation")
+
+// shared reg user and business info
+biography String @default("")
+avatar String? @default("")
+phone_number String?	
+postal_address String?	
+
+// business info
+business_name String?
+owner_name String?
+location_lon Float?
+location_lat Float?
+verified Boolean @default(false)
+
+job_postings Job[]
+business_negotiations Negotiation[] @relation("business_negotiation")
+}
+
+
+model PositionType {
+position_id Int @id @default(autoincrement())
+name String @unique
+description String
+hidden Boolean @default(true)
+num_qualified Int @default(0)
+
+job_postings Job[] // jobs w this position type
+qualifications Qualification[] //users with the qualifications 
+}
+
+model Qualification {
+qualification_id Int @id @default(autoincrement())
+status QualStatus @default(created)
+note String @default("")
+document String? 
+position_id Int
+user_id Int
+updatedAt DateTime @updatedAt
+position_type PositionType @relation(fields: [position_id], references: [position_id])
+reg_user Account @relation(fields: [user_id], references: [id])
+
+@@unique([position_id, user_id]) // one qualification per user per position
+}
+
+enum QualStatus{
+  created
+  submitted
+  revised 
+  approved 
+  rejected
+}
+
+model Job {
+job_id Int @id @default(autoincrement())
+position_id Int
+business_id Int	
+regularuser_id Int?
+salary_min	Float // currency usually float
+salary_max	Float	
+salary_avg Float // computed value
+start_time DateTime
+end_time	DateTime	
+createdAt DateTime @default(now())
+updatedAt DateTime @updatedAt
+note	String?	 @default("")
+status	JobStatus @default(open)
+
+worker Account? @relation("AssignedWorker", fields:[regularuser_id], references:[id])
+position_type PositionType @relation(fields: [position_id], references: [position_id])
+business Account @relation(fields: [business_id], references: [id])
+interests Interest[]
+negotiations Negotiation[]
+}
+
+enum JobStatus{
+  open
+  filled
+  expired
+  canceled 
+  completed
+}
+
+model Interest {
+interest_id Int @id @default(autoincrement())
+user_id	Int	
+user_interest	Boolean?	
+job_id Int	
+business_interest	Boolean?	
+
+createdAt DateTime @default(now())
+updatedAt DateTime @updatedAt
+
+user Account @relation(fields: [user_id], references: [id], onDelete: Cascade)
+job Job @relation(fields: [job_id], references: [job_id], onDelete: Cascade) // when job is deleted, this will be deleted as well
+negotiation Negotiation?
+@@unique([job_id, user_id])
+}	
+
+model Negotiation {
+negotiation_id Int @id @default(autoincrement())
+interest_id	Int	@unique
+user_id	Int	
+business_id Int	
+job_id Int
+
+status	NegoStatus @default(active)
+candidate_decision Decision?
+business_decision Decision?
+
+createdAt DateTime @default(now())
+updatedAt DateTime @updatedAt
+expiresAt DateTime
+
+interest Interest @relation(fields: [interest_id], references: [interest_id], onDelete: Cascade)  // when job is deleted, this will be deleted as well
+user Account @relation("user_negotiation", fields: [user_id], references: [id], onDelete: Cascade)
+business Account @relation("business_negotiation", fields: [business_id], references: [id], onDelete: Cascade)
+job Job @relation(fields: [job_id], references: [job_id], onDelete: Cascade)      
+
+}
+
+enum Decision {
+  accept
+  decline
+}
+
+enum NegoStatus {
+  active
+  success
+  failed
+  expired
+}
