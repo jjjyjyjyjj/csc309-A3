@@ -1,0 +1,155 @@
+.qualificationsPage{
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    width: 100%;
+    min-height: 80vh;
+    border: 1px solid;
+}
+
+.qualListContainer{
+    width: 300px;
+    flex-shrink: 0;
+    border-right: 1px solid;
+    overflow-y: auto;
+}
+
+.resultList{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.qualSummary {
+    padding: 10px;
+}
+
+.qualActive {
+    padding: 10px;
+    background-color: #d5e0e2;
+    border-left: 5px solid #135865;
+}
+
+.qualActive .qualSummary .positionTitle, .qualActive .qualSummary .status{
+    color: #135865;
+    padding: 0px;
+}
+
+.detailPanel{
+    flex-grow: 1;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #fff;
+}
+
+.detailPanel h2, h3{
+    margin: 5px 0px;
+    font-family: "Montserrat", sans-serif;
+    color: #135865;
+}
+
+.detailGrid p, .noteSection p{
+    margin: 5px 0px;
+    font-family: "Montserrat", sans-serif;
+    color: #135865;
+}
+
+.buttons{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.EditDocBtn,.viewDocBtn, .updateBtn{
+    background-color: #e2e9ea;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #135865;
+    width: fit-content;
+    padding: 5px 10px;
+    margin: 0;
+    border: 2px solid;
+    border-radius: 10px;
+}
+
+.EditDocBtn:hover, .viewDocBtn:hover, .updateBtn:hover{
+    background-color: #135865;
+    color: #fff;
+}
+
+.preview{
+    width: 50%;
+    height: 50%;
+}
+
+.closePreview {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #135865;
+    padding: 5px 10px;
+    margin: 0;
+    border:none;
+    background-color: transparent;
+}
+.closePreview:hover {
+    border: 2px solid #135865;
+    color: #135865;
+}
+
+.previewHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    align-items: baseline;
+    gap: 10px;
+    padding-bottom:10px;
+}
+
+.openTab{
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #135865;
+    cursor:pointer;
+}
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modalContent {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.formGroup {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.modalActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}

@@ -1,0 +1,219 @@
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 4rem 1.5rem 0rem;
+    overflow: hidden;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.hero-squiggle {
+  display: block;
+  width: 260px;
+  margin: 0 auto;
+}
+
+.hero-wave-container {
+    /* background-color: #d4e8d0; */
+    position: relative;
+    background-image: url('../../../assets/hero-wave.svg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 1440px;
+    padding: 20rem 2rem 23rem;
+    text-align: center;
+}
+
+.about-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    max-width: 600px;
+    margin: 1rem auto 0;
+  }
+
+
+.ending-wave {
+    background-image: url('../../../assets/hero-wave.svg');
+    padding: 10rem 5rem;
+}
+
+/* .login {
+    background: #4a9e7f;
+    color: #ffffff;
+  }
+  
+  .business {
+    background: #1a3a3a;
+    color: #ffffff;
+  } */
+
+
+  /* HERO SECTION */
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 5rem 1.5rem 2rem;
+  overflow: hidden;
+  /* background: linear-gradient(180deg, #ffffff 0%, #f7fbfc 100%); */
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+  letter-spacing: -0.5px;
+}
+
+.hero-accent {
+  color: #135865;
+}
+
+.hero-squiggle {
+  display: block;
+  width: 260px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+/* ABOUT SECTION (wave background stays EXACT SAME SIZE) */
+.hero-wave-container {
+  position: relative;
+  background-image: url('../../../assets/hero-wave.svg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 1440px; /* DO NOT CHANGE */
+  padding: 18rem 2rem 22rem;
+  text-align: center;
+}
+
+/* SECTION TITLE */
+.about-jobfinder {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #135865;
+  margin-bottom: 1rem;
+}
+
+/* ABOUT CARD */
+.about-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem 2.5rem;
+  max-width: 650px;
+  margin: 1.5rem auto 0;
+
+  border: 1px solid #e8e8e4;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* CTA SECTION */
+.log-in-container {
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #e8e8e4;
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  max-width: 520px;
+  margin: -6rem auto 4rem; /* pulls it slightly into wave for depth */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  position: relative;
+  z-index: 2;
+}
+
+.container-header {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+}
+
+/* BUTTON ROW */
+.btn-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* BUTTON BASE */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* PRIMARY BUTTON */
+.btn.login {
+  background: #135865;
+  color: #ffffff;
+}
+
+.btn.login:hover {
+  background: #0f4a54;
+  transform: translateY(-2px);
+}
+
+/* SECONDARY BUTTON */
+.btn.business {
+  background: #ffffff;
+  color: #135865;
+  border: 1.5px solid #135865;
+}
+
+.btn.business:hover {
+  background: #f0f7f8;
+  transform: translateY(-2px);
+}
+
+/* ENDING WAVE (unchanged size idea preserved) */
+/* .ending-wave {
+  background-image: url('../../../assets/hero-wave.svg');
+  padding: 10rem 5rem;
+  opacity: 0.9;
+} */
+
+
+.about-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.about-icon {
+  font-size: 1.5rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.about-item strong {
+  display: block;
+  font-size: 1rem;
+  color: #135865;
+  margin-bottom: 4px;
+}
+
+.about-item p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5;
+}

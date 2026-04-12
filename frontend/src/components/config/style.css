@@ -1,0 +1,59 @@
+.config-container{
+    display:grid;
+    grid-template-areas: 
+    "reset nego"
+    "job avail";
+}
+
+.resetCooldown{
+    grid-area: reset;
+    padding: 20px;
+    border: 2px solid;
+    border-radius: 20px;
+    margin:10px;
+}
+
+.negoWindow{
+    grid-area: nego;
+    padding: 20px;
+    border: 2px solid;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.jobStart{
+    grid-area: job;
+    padding: 20px;
+    border: 2px solid;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.availTime{
+    grid-area: avail;
+    padding: 20px;
+    border: 2px solid;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.config-container h4{
+    margin :0;
+    color:#297786;
+    font-weight: 500 !important;
+}
+
+.config-container p{
+    margin-top:10px;
+    border:1px solid;
+    width: fit-content;
+    padding:10px;
+    font-weight:500;
+    background-color: #dbe0e17a;
+    color:#38545a;
+    font-size: 20px;
+}
+
+.config-container input[type="number"]{
+    color: #135865;
+}

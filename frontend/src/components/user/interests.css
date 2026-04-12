@@ -1,0 +1,44 @@
+.interestsPage {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 80vh;
+    border: 1px solid #c9c9c7;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.intListContainer {
+    width: 280px;
+    flex-shrink: 0;
+    border-right: 1px solid #e8e8e4;
+    overflow-y: auto;
+    background-color: #fafafa;
+}
+
+.resultItem {
+    list-style: none;
+    border-bottom: 1px solid #e8e8e4;
+    cursor: pointer;
+    padding: 0;
+}
+
+.resultItem:hover {
+    background-color: #f0f7f8;
+}
+
+.resultItemActive {
+    background-color: #f0f7f8;
+    border-left: 3px solid #135865;
+}
+
+.intDetailPanel {
+    flex: 1;
+    padding: 24px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background-color: #fff;
+    overflow-y: auto;
+}

@@ -1,0 +1,62 @@
+@import './interests.css';
+
+.invitationsPage{
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    width: 100%;
+    min-height: 80vh;
+    border: 1px solid;
+}
+
+.invListContainer{
+    width: 300px;
+    flex-shrink: 0;
+    border-right: 1px solid;
+    overflow-y: auto;
+}
+
+.resultList{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.invSummary {
+    padding: 10px;
+}
+
+.invActive .invSummary .positionTitle, .qualActive .qualSummary .status{
+    color: #135865;
+    padding: 0px;
+}
+
+.detailPanel{
+    flex-grow: 1;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #fff;
+}
+
+.detailPanel h2, h3{
+    margin: 5px 0px;
+    font-family: "Montserrat", sans-serif;
+    color: #135865;
+}
+
+.detailGrid p, .noteSection p{
+    margin: 5px 0px;
+    font-family: "Montserrat", sans-serif;
+    color: #135865;
+}
+
+.buttons{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 20px;
+}

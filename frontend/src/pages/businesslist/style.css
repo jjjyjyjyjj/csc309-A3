@@ -1,0 +1,9 @@
+.searchPage{
+    width: 100%;
+}
+
+.searchTitle{
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #135865;
+}

@@ -1,0 +1,91 @@
+.searchPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.searchBar{
+    display: flex;
+    margin-bottom: 20px;
+    width: 700px;
+    gap:20px;
+}
+
+.searchInput{
+    background-color: rgb(229, 236, 233);
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+.searchButton{
+    background-color: #135865;
+    opacity: 0.8;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.results {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center; */
+    /* grid-template-columns: 1fr 1fr; */
+    gap: 10px;
+    width: 90%;
+    margin: 0px 2px;
+}
+
+.resultList {
+    list-style: none;
+    padding: 0;
+    margin: 0px 2px;
+    font-size: 20px;
+    text-align: left;
+    max-width: 300px;
+    width:80%;
+}
+
+.pagination{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+  gap: 10px;
+}
+
+button.pageNum{
+    background-color: #c7c7c7;
+    color: #135865;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button.pageNum:hover{
+    background-color: #135865;
+    color: white;
+}
+
+.pageNum.pageActive {
+    background-color: #135865;
+    color: white;
+}
+
+.emptyDetailState{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}

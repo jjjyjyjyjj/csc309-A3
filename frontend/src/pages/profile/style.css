@@ -1,0 +1,17 @@
+.profile{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+}
+
+.avatarContainer {
+    padding-left: 20px;
+    margin-bottom: 25px;
+    width:80%;
+}
+
+.form{
+    width: 80%;
+}

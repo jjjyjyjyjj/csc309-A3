@@ -1,0 +1,104 @@
+.profilePhotoInput {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.profilePhotoContainer {
+    cursor: pointer;
+    width: max(10vw, 50px);
+    height: max(10vw, 50px);
+    border-radius: 50%;
+    border: 2px dashed #5b6769;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #e2e8e9;
+
+    position: relative;
+    /* required for the X button */
+    user-select: none;
+}
+
+.profilePhotoImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profilePhotoPlaceholder {
+    color: #7c8385;
+    font-size: 14px;
+    text-align: center;
+    padding: 0 10px;
+    font-family: 'Montserrat',sans-serif;
+}
+
+.hiddenFileInput {
+    display: none;
+}
+
+.removeButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: max(25px, 3vw);
+    height: max(25px, 3vw);
+    border-radius: 50%;
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    background: rgba(0, 0, 0, 0.45);
+    color: #fff;
+
+    font-size: max(16px, 2vw);
+    line-height: 0;
+    cursor: pointer;
+    padding: 0;
+}
+
+.removeButton:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* @media(min-width: 768px) {
+    .profilePhotoContainer {
+        cursor: pointer;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 2px dashed #ccc;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        overflow: hidden;
+        background-color: #f5f5f5;
+
+        position: relative;
+        // required for the X button 
+        user-select: none;
+    }
+    .removeButton {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        background: rgba(0, 0, 0, 0.45);
+        color: #fff;
+
+        font-size: 20px;
+        line-height: 0;
+        cursor: pointer;
+        padding: 0;
+    }
+} */

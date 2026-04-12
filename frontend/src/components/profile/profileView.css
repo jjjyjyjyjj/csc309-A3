@@ -1,0 +1,332 @@
+/* .profileContainer{
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+}
+
+.tag{
+    display:flex;
+    flex-direction:row; 
+    gap:20px;
+    align-items: center;
+}
+
+.resume h1 {
+    padding: 10px 5px;
+    margin: 0px;
+    font-family: "Montserrat", sans-serif;
+    color: #135865;
+    font-size: 35px;
+}
+
+.user {
+    width:100%;
+    background-color: #d5e0e2;
+    border-bottom: 1px solid #135865;
+    display:flex;
+    flex-direction:row;
+    padding:0px;
+}
+
+.avatarWrapper{
+    height:150px;
+    width: 150px;
+    border-radius: 50%;
+    margin:10px 10px;
+    align-self: center;
+}
+.avatar{
+    width:100%;
+    height:80%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+
+.userDetails{
+    display:flex;
+    flex-direction: column;
+    width:80%;
+}
+
+.tag, .userDetails p {
+    padding: 10px 5px;
+    margin: 0px;
+    font-family: "Montserrat", sans-serif;
+    color: #135865;
+    font-size: 20px;
+}
+
+.tag p.avail{
+    border: 2px solid #135865;
+    border-radius: 25px;
+    background-color: #e2e9ea;
+    font-size: 12px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color:#135865;
+    width:max-content;
+}
+
+.tag p.noAvail {
+    border: 2px solid #651313;
+    border-radius: 25px;
+    background-color: #eae2e2;
+    font-size: 12px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: #651313;
+    width: max-content;
+}
+
+.edit{
+    display:flex;
+    align-self: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:30%;
+    height:100%;
+}
+
+button.edit {
+    background-color:#e2e9ea;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color:#135865;
+    width:200px;
+    right:0;
+    padding: 20px 10px;
+    margin:0;
+    margin-right:20px;
+    border-radius:10px;
+}
+
+button.edit:hover{
+    background-color: #135865;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: #fff;
+    right: 0;
+}
+
+
+.businessJobs, .userDocs{
+    width: 100vw;
+    height: 200px;
+}
+
+.jobs, .resume, .qualifications{
+    padding: 20px;
+}
+
+.resume{
+    padding-bottom: 15px;
+    border-bottom: 1px solid #135865;
+}
+
+.viewResumeBtn{
+    background-color: #e2e9ea;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #135865;
+    width: fit-content;
+    padding: 5px 10px;
+    margin: 0;
+    border: 2px solid;
+    border-radius: 10px;
+}
+ 
+.viewResumeBtn:hover {
+    background-color: #135865;
+    color: #fff;
+}
+
+.preview {
+    margin-top: 10px;
+    width: 50%;
+    height: 50%;
+}
+
+.closePreview {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #135865;
+    padding: 5px 10px;
+    margin: 0;
+    border: none;
+    background-color: transparent;
+}
+
+.closePreview:hover {
+    border: 2px solid #135865;
+    color: #135865;
+}
+
+.previewHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    align-items: baseline;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+.openTab {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #135865;
+    cursor: pointer;
+} */
+
+
+.profileContainer {
+    width: 97%;
+    display: flex;
+    flex-direction: column;
+    background: #fafafa;
+}
+
+/* HEADER CARD */
+.user {
+    width: 100%;
+    background-color: #135865;
+    display: flex;
+    flex-direction: row;
+    padding: 24px;
+    align-items: center;
+    gap: 20px;
+
+    color: #fff;
+}
+
+/* AVATAR */
+.avatarWrapper {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.15);
+    font-weight: 700;
+    font-size: 28px;
+    color: #fff;
+}
+
+/* IMAGE */
+.avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* INITIALS FALLBACK */
+.avatarFallback {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+/* DETAILS */
+.userDetails {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* NAME */
+h1 {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    font-size: 28px;
+}
+
+/* TAG */
+.tag {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+}
+
+/* STATUS BADGES */
+.tag p.avail {
+    border: 1px solid #fff;
+    border-radius: 20px;
+    padding: 4px 10px;
+    font-size: 12px;
+    color: #135865;
+    background: #fff;
+}
+
+.tag p.noAvail {
+    border: 1px solid #ffdddd;
+    border-radius: 20px;
+    padding: 4px 10px;
+    font-size: 12px;
+    color: #fff;
+    background: rgba(255,0,0,0.2);
+}
+
+/* EDIT BUTTON */
+button.edit {
+    background-color: #fff;
+    color: #135865;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button.edit:hover {
+    background-color: #e8f3f5;
+}
+
+.businessJobs, .userDocs {
+    width: 100vw;
+    height: 200px;
+}
+
+
+.businessJobs,
+.userDocs {
+    width: 100%;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.resume h1, .qualifications h1 {
+    padding: 10px 5px;
+    margin: 0px;
+    font-family: "Montserrat", sans-serif;
+    color: #135865;
+    font-size: 35px;
+}
+
+.viewResumeBtn{
+    background-color: #e2e9ea;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #135865;
+    width: fit-content;
+    padding: 5px 10px;
+    margin: 0;
+    border: 2px solid;
+    border-radius: 10px;
+}
