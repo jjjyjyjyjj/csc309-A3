@@ -1,0 +1,178 @@
+.chatContainer{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    padding:0px 20px;
+}
+
+.chatRoomTitle h2{
+    font-family: "Montserrat",sans-serif;
+    color: #0c3840;
+}
+
+.noNegotiation{
+    align-self:center;
+    color:#135865;
+    font-weight: 500;
+}
+
+.negotiationHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 10px;
+}
+
+.headerLeft{
+    color: #21505a;
+    font-family:"Montserrat",sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.headerRight{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    color:#651313;
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+}
+
+.messageContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    border: 1px solid;
+}
+
+.acceptanceState{
+    font-family:"Montserrat",sans-serif;
+    color: #135865;
+    font-size: 20px;
+    /* margin-bottom:10px; */
+    padding: 0 10px;
+    /* padding-bottom: 10px; */
+    border: 1px solid;
+    width:fit-content;
+}
+
+.allConvos{
+    width: 15%;
+    border-right:1px solid;
+}
+.chosenConvo{
+    padding:0px;
+    width:100%;
+}
+.chatLog{
+    background-color: #c1c7c83d;
+    height:600px;
+    overflow-y: auto;
+    width:100%;
+    /* padding: 10px; */
+}
+
+.message.mine {
+    color: #a6bcc1;
+    background-color: #4c5b5f;
+    padding: 10px;
+}
+
+.message.theirs {
+    color: #48565a;
+    background-color: #c7dce1;
+    padding: 10px;
+}
+
+.msgText{
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.msgTime{
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    font-weight: 400;}
+
+.negotiationControls{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 10px;
+}
+.acceptBtn{
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #eefaf7;
+    border: 1px solid #1f3f37;
+    background-color: #4f8d7e;
+    padding: 10px;
+}
+
+.acceptBtn:hover {
+    background-color: #eefaf7;
+    border: 1px solid #1f3f37;
+    color: #4f8d7e;
+}
+
+.rejectBtn {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #faeeee;
+    border: 1px solid #3f1f1f;
+    background-color: #8d4f4f;
+    padding: 10px;
+}
+
+.rejectBtn:hover {
+    background-color: #faeeee;
+    border: 1px solid #3f1f1f;
+    color: #8d4f4f;
+}
+
+.endedBanner{
+    padding-left: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.inputArea{
+    padding-left: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 20px;
+    margin-bottom: 10px;
+    width:98%;
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    border:none;
+    border-bottom: 2px solid #135865;
+    align-self: left;
+}
+
+.sendBtn{
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color:#135865;
+    width: 150px;
+    height: 50px;
+    border: 2px solid #135865;
+    background-color: #d5e0e2;
+}
+
+.sendBtn:hover, .sendBtn:active {
+    background-color: #135865;
+    color: #d5e0e2;
+}

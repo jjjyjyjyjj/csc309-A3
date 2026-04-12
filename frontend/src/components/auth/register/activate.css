@@ -1,0 +1,82 @@
+/* PAGE WRAPPER */
+.activatePage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background-color: #fafafa;
+}
+
+/* MAIN CARD (dark theme like signup) */
+.activateWrapper {
+    width: 100%;
+    max-width: 520px;
+    padding: 32px;
+    background-color: #135865 !important;
+    border-radius: 12px;
+    border: 1px solid #135865 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    color: #fff !important;
+}
+
+/* TEXT */
+.activateWrapper .formTitle {
+    color: #fff !important;
+    margin: 0;
+}
+
+.activateWrapper .formSubtitle {
+    color: rgba(255, 255, 255, 0.8) !important;
+    margin: 0;
+}
+
+/* ERROR */
+.errorMessage {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffd6d6;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* BUTTON (same style as signup dark button) */
+.activateButton {
+    margin-top: 10px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: transparent;
+    color: #fff !important;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.activateButton:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.activateButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* SUCCESS STATE BUTTON */
+.activateWrapper .actionBtn {
+    background: #fff !important;
+    color: #135865 !important;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+.activateWrapper .actionBtn:hover {
+    background: #f0f0f0 !important;
+}

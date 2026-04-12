@@ -1,0 +1,95 @@
+.resetFormWrapper{
+    padding: 20px;
+    width: 80%;
+    background-color: #135865;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-radius: 20px;
+    opacity: 0.7;
+}
+.resetForm{
+    flex: 1;
+    width: 90%;
+}
+
+.formTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    color: #ffffff;
+    line-height: 1;
+}
+
+.formSubtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0 0 1rem 0;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+.inputField {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1rem;
+    width: 80%;
+    padding: 0.75rem;
+    margin: 1rem 0;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    font-size: 1rem;
+}
+
+.inputField label {
+    text-align: left;
+    color: white;
+}
+
+.inputField input {
+    flex: 1;
+    /* width: 0; */
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.inputField input::placeholder {
+    color: #fff;
+    opacity: 0.6;
+}
+
+.formActions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.actionBtn {
+    background: none;
+    border: none;
+    font-family: sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    color: #fff;
+    padding: 0;
+}
+
+.actionBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.actionBtn:hover:not(:disabled){
+    text-decoration: underline;
+}
