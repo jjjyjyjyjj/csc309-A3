@@ -4,7 +4,7 @@ const express = require("express");
 const cors = require('cors');
 const path = require('path');
 import 'dotenv/config';
-
+require('dotenv').config(); 
 
 function create_app() {
     const app = express();
