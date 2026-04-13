@@ -16,17 +16,18 @@ function create_app() {
     const systemRoutes = require("./routes/system");
     const authRoutes = require("./routes/auth");
 
-    app.use(express.json());
+    
     // Set up cors to allow requests from your React frontend
-    app.use(cors({
+    const corsOptions= {
         origin: process.env.FRONTEND_URL || "http://localhost:5173",
         methods: ['GET', 'POST', 'PATCH', 'PUT', 'DELETE', 'OPTIONS'],
         allowedHeaders: ['Content-Type', 'Authorization'],
         credentials: true
-        }));
+        };
+    app.options('*', cors(corsOptions));  // ← must be FIRST, with options
+    app.use(cors(corsOptions));
+    app.use(express.json());
 
-    app.options('*', cors());     
-        
     // app.use('/uploads', express.static('uploads'));    
     app.use(express.static(path.join(__dirname, '../')));
     app.use("/qualifications", qualificationRoutes);
