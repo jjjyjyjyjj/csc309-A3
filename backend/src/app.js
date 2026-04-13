@@ -4,7 +4,7 @@ const express = require("express");
 const cors = require('cors');
 const path = require('path');
 require('dotenv').config(); 
-
+console.log('FRONTEND_URL:', process.env.FRONTEND_URL);
 function create_app() {
     const app = express();
     const qualificationRoutes = require("./routes/qualifications");
