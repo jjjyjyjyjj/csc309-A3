@@ -16,19 +16,29 @@ function create_app() {
     const systemRoutes = require("./routes/system");
     const authRoutes = require("./routes/auth");
 
-    
     // Set up cors to allow requests from your React frontend
-    const corsOptions= {
-        origin: process.env.FRONTEND_URL || "http://localhost:5173",
-        methods: ['GET', 'POST', 'PATCH', 'PUT', 'DELETE', 'OPTIONS'],
-        allowedHeaders: ['Content-Type', 'Authorization'],
-        credentials: true
-        };
-    app.options('*', cors(corsOptions));  // ← must be FIRST, with options
-    app.use(cors(corsOptions));
+    // const corsOptions= {
+    //     origin: process.env.FRONTEND_URL || "http://localhost:5173",
+    //     methods: ['GET', 'POST', 'PATCH', 'PUT', 'DELETE', 'OPTIONS'],
+    //     allowedHeaders: ['Content-Type', 'Authorization'],
+    //     credentials: true
+    //     };
+    // app.options('*', cors(corsOptions));  // ← must be FIRST, with options
+    // app.use(cors(corsOptions));
+    app.use((req, res, next) => {
+        res.setHeader('Access-Control-Allow-Origin', process.env.FRONTEND_URL || 'http://localhost:5173');
+        res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PATCH, PUT, DELETE, OPTIONS');
+        res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+        res.setHeader('Access-Control-Allow-Credentials', 'true');
+        
+        if (req.method === 'OPTIONS') {
+            return res.sendStatus(204);
+        }
+        
+        next();
+        });
     app.use(express.json());
 
-    // app.use('/uploads', express.static('uploads'));    
     app.use(express.static(path.join(__dirname, '../')));
     app.use("/qualifications", qualificationRoutes);
     app.use("/users", userRoutes);
